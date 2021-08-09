@@ -1,0 +1,62 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                  https://www.springframework.org/schema/beans/spring-beans.xsd
+                          http://www.springframework.org/schema/context
+                  https://www.springframework.org/schema/context/spring-context.xsd">
+    <!--加载jdbc配置文件-->
+    <context:property-placeholder location="classpath:date.properties"/>
+
+    <!--1.创建spring控制的资源-->
+    <!--bean :定义bean对象   id:唯一标识  class ：加载的实现类-->
+    <!--name ：可以定义多个名称-->
+    <!--<bean id="userService" name="userService1,userService2" class="com.itheima.service.impl.UserServiceImpl"></bean>-->
+
+    <!--scope : 用于控制对象是否是单列还是多列-->
+    <!--singleton  : 单列 默认的  在加载配置文件的时候，创建对象
+     prototype : 多列的   在调用getBean() 方法时创建对象-->
+    <!--<bean id="userService" scope="prototype" class="com.itheima.service.impl.UserServiceImpl"></bean>-->
+
+    <!--声明bean加载容器-->
+    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl">
+        <!--引入的变量用property属性来注入，name：注入的变量名 ref：声明注入的bean的id-->
+        <property name="userDao" ref="userDao"/>
+        <!--<property name="">-->
+            <!--<list>-->
+                <!--<value></value>-->
+                <!--<value></value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="">-->
+            <!--<array>-->
+                <!--<value></value>-->
+                <!--<value></value>-->
+            <!--</array>-->
+        <!--</property>-->
+        <!--<property name="">-->
+        <!--<props>-->
+            <!--<prop key=""></prop>-->
+            <!--<prop key=""></prop>-->
+        <!--</props>-->
+    <!--</property>-->
+        <!--<property name="">-->
+          <!--<set>-->
+              <!--<value></value>-->
+              <!--<value></value>-->
+          <!--</set>-->
+        <!--</property>-->
+        <!--<property name="">-->
+            <!--<map>-->
+                <!--<entry key="" value=""/>-->
+                <!--<entry key="" value=""/>-->
+            <!--</map>-->
+        <!--</property>-->
+
+    </bean>
+    <!--声明bean加载容器-->
+    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">
+        <property name="username" value="${user}"/>
+    </bean>
+</beans>

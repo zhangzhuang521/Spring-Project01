@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module01/Spring_Module01.iml" filepath="$PROJECT_DIR$/Spring_Module01/Spring_Module01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module02/Spring_Module02.iml" filepath="$PROJECT_DIR$/Spring_Module02/Spring_Module02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module03/Spring_Module03.iml" filepath="$PROJECT_DIR$/Spring_Module03/Spring_Module03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module04/Spring_Module04.iml" filepath="$PROJECT_DIR$/Spring_Module04/Spring_Module04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module05/Spring_Module05.iml" filepath="$PROJECT_DIR$/Spring_Module05/Spring_Module05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Module06/Spring_Module06.iml" filepath="$PROJECT_DIR$/Spring_Module06/Spring_Module06.iml" />
+      <module fileurl="file://F:/学习课件/3.阶段三-主流框架/17-Spring/day01/代码/第一天/Spring_day01_05_综合案例spring整合mybatis/Spring_day01_05_综合案例spring整合mybatis.iml" filepath="F:/学习课件/3.阶段三-主流框架/17-Spring/day01/代码/第一天/Spring_day01_05_综合案例spring整合mybatis/Spring_day01_05_综合案例spring整合mybatis.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件-->
+<!--ma ：映射根标签
+namespace ：命名空间
+-->
+
+<mapper namespace="com.itheima.dao.AccountDao">
+    <!--配置根据id查询-->
+    <select id="findById" resultType="account" parameterType="int">
+        select * from account where id = #{id}
+    </select>
+
+    <!--配置查询所有-->
+    <select id="findAll" resultType="account">
+        select * from account
+    </select>
+
+    <!--配置保存-->
+    <insert id="save" parameterType="account">
+        insert into account(name,money)values(#{name},#{money})
+    </insert>
+
+    <!--配置删除-->
+    <delete id="delete" parameterType="int">
+        delete from account where id = #{id}
+    </delete>
+
+    <!--配置更新-->
+    <update id="update" parameterType="account">
+        update account set name=#{name},money=#{money} where id=#{id}
+    </update>
+</mapper>
+
+        <!--动态接口代理的四大规则：-->
+        <!--1.namespace命名空间需要与代理接口的全类型一样-->
+        <!--2.id与代理接口中的方法对应一致-->
+        <!--3.参数对象映射类型与方法中的参数类型一致-->
+        <!--4.结果对象映射类型与方法中的返回值类型一致-->
